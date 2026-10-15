@@ -128,6 +128,7 @@ elif [[ "$SOC_VERSION" =~ ^(ascend)?910b ]]; then
         "hc_pre_sinkhorn"
         "hc_pre_inv_rms"
         "hc_post"
+        "hc_post_va"
         "rms_norm_dynamic_quant"
         "inplace_partial_rotary_mul"
         "dispatch_ffn_combine"
@@ -206,6 +207,7 @@ elif [[ "$SOC_VERSION" =~ ^ascend910_93 ]]; then
         "hc_pre_inv_rms"
         "hc_pre_va"
         "hc_post"
+        "hc_post_va"
         "rms_norm_dynamic_quant"
         "inplace_partial_rotary_mul"
         "dispatch_ffn_combine"
@@ -293,6 +295,7 @@ elif [[ "$SOC_VERSION" =~ ^ascend950 ]]; then
         "hc_pre_sinkhorn"
         "hc_pre_inv_rms"
         "hc_post"
+        "hc_post_va"
         "rms_norm_dynamic_quant"
         "inplace_partial_rotary_mul"
        # "dispatch_ffn_combine"   # A5中使用moe_mega算子替换
