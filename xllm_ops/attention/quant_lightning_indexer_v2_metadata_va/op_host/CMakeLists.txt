@@ -12,7 +12,7 @@ add_op_to_compiled_list()
 add_modules_sources(OPTYPE quant_lightning_indexer_v2_metadata_va ACLNNTYPE aclnn)
 
 # AICPU kernel 位于 op_kernel_aicpu/ (与 op_host 同级)。add_modules_sources 只 glob
-# op_host/*_aicpu*.cpp，不会编译它；此处显式把 AICPU kernel 编进 libmath_aicpu_kernels.so
+# op_host/*_aicpu*.cpp，不会编译它；此处显式把 AICPU kernel 编进 libtransformer_aicpu_kernels.so
 # (BUILD_WITH_INSTALLED_DEPENDENCY_CANN_PKG=ON 时走 add_aicpu_cust_kernel_modules 交叉编译)。
 file(GLOB QLI_META_AICPU_SRCS ${CMAKE_CURRENT_SOURCE_DIR}/../op_kernel_aicpu/*_aicpu*.cpp)
 if(QLI_META_AICPU_SRCS)
